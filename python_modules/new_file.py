@@ -19,7 +19,3 @@ if os.path.exists(path):
 else:
     print(f"{path} doesn't exists")
 
-# write a program that would accept a path 
-#  check if the path is valid
-# if the path is a directory
-# list on files that ends with .py
