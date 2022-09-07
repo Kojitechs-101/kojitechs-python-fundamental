@@ -34,13 +34,4 @@ python writing line python writing line 6
 python writing line python writing line 7
 python writing line python writing line 8
 python writing line python writing line 9
-python writing line python writing line 1
-python writing line python writing line 2
-python writing line python writing line 3
-python writing line python writing line 4
-python writing line python writing line 5
-python writing line python writing line 6
-python writing line python writing line 7
-python writing line python writing line 8
-python writing line python writing line 9
 python writing line 

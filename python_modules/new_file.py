@@ -4,7 +4,7 @@ import platform
 
 #path = input("Provide user name: ")
 path = "/Users/kojibello/Downloads/kojitechs-101/kojitechs-python-fundamental"
-desire_ext = input("Enter desire extension: ") # ".py", ".tf" ".json", ".yaml"
+desire_ext = input("Enter desire extension: ")
 
 if os.path.exists(path):
     if os.path.isdir(path):
