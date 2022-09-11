@@ -1,0 +1,24 @@
+[
+    {
+    "ID": 1,   
+    "STUDENT_NAME": "john",
+    "Email": "12344@gmail.com",
+    "Phone_Number": "2024288812",
+    "STUT_ADD": "6510 West Forest RD Landover", 
+    "STUT_APP": "4", 
+    "zip": 20784,
+    "Amount_paid": "200",
+    "PaidFull": "False"
+    }, 
+    {
+    "ID": 2,
+    "STUDENT_NAME": "perter",    
+    "Email": "12344@gmail.com",
+    "Phone_Number": "2024288812",
+    "STUT_ADD": "6510 West Forest RD Landover", 
+    "STUT_APP": "4", 
+    "zip": 20784,
+    "Amount_paid": "500",
+    "PaidFull": "True"
+    }
+]
