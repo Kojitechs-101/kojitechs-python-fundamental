@@ -29,54 +29,56 @@ except Exception as err:
 """    
 
 ## CREATE A DATABASE TABLES USING PYTHON
-""" 
-try:
-    with psycopg2.connect(user=DB_USER, database=DB_NAME, password=DB_PASSWORD, host=DB_HOST) as conn:
-        cursor = conn.cursor()
-        print("creating table in database...")
-        time.sleep(4)
-        create_table = '''CREATE TABLE kojitechs
-                        (ID INT PRIMARY KEY NOT NULL, 
-                        FIRST_NAME  TEXT NOT NULL ,
-                        LAST_NAME   TEXT NOT NULL,
-                        PRICE REAL);'''
-        cursor.execute(create_table)
-        conn.commit()
-        print("Table created successfuly....")
 
-except Exception as err:
-    print(err)
-"""
+# try:
+#     with psycopg2.connect(user=DB_USER, database=DB_NAME, password=DB_PASSWORD, host=DB_HOST) as conn:
+#         cursor = conn.cursor()
+#         print("creating table in database...")
+#         time.sleep(4)
+#         create_table = '''CREATE TABLE kojitechs
+#                         (ID INT PRIMARY KEY NOT NULL, 
+#                         FIRST_NAME  TEXT NOT NULL ,
+#                         LAST_NAME   TEXT NOT NULL,
+#                         PRICE REAL);'''
+#         cursor.execute(create_table)
+#         conn.commit()
+#         print("Table created successfuly....")
 
-kojitechs = json.loads(Path("kojitechs.json").read_text())
+# except Exception as err:
+#     print(err)
 
+
+kojitechs = json.loads(Path("studentinfo.json").read_text())
+
+for i in kojitechs:
+    print(tuple(i.values()))
 # INSERTING DATA IN A TABLE
-try:
-    with psycopg2.connect(user=DB_USER, database=DB_NAME, password=DB_PASSWORD, host=DB_HOST) as conn:
-        cursor = conn.cursor()
-        print("inserting data in our database...")
-        time.sleep(4)
-        insert_data = """INSERT INTO kojitechs VALUES(%s,%s,%s,%s);"""
+# try:
+#     with psycopg2.connect(user=DB_USER, database=DB_NAME, password=DB_PASSWORD, host=DB_HOST) as conn:
+#         cursor = conn.cursor()
+#         print("inserting data in our database...")
+#         time.sleep(4)
+#         insert_data = """INSERT INTO kojitechs VALUES(%s,%s,%s,%s);"""
 
-        for colums in kojitechs:
-            cursor.execute(insert_data, tuple(colums.values()))
+#         for colums in kojitechs:
+#             cursor.execute(insert_data, tuple(colums.values()))
 
-        conn.commit()
-        print("trasaction successful....")
+#         conn.commit()
+#         print("trasaction successful....")
         
-except Exception as err:
-    print(err)    
+# except Exception as err:
+#     print(err)    
 
 
 
-## REDAD TABLE
-try:
-    with psycopg2.connect(user=DB_USER, database=DB_NAME, password=DB_PASSWORD, host=DB_HOST) as conn:
-        cursor = conn.cursor()
-        time.sleep(4)
-        commands = "SELECT * FROM kojitechs"
-        cursor.execute(commands)
-        for i in cursor.fetchall():
-            print(i)
-except Exception as err:
-    print(err)        
+# ## REDAD TABLE
+# try:
+#     with psycopg2.connect(user=DB_USER, database=DB_NAME, password=DB_PASSWORD, host=DB_HOST) as conn:
+#         cursor = conn.cursor()
+#         time.sleep(4)
+#         commands = "SELECT * FROM kojitechs"
+#         cursor.execute(commands)
+#         for i in cursor.fetchall():
+#             print(i)
+# except Exception as err:
+#     print(err)        
