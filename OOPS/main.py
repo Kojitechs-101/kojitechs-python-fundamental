@@ -1,6 +1,7 @@
 # OOP'S
 import os
 
+from recap_of_OOPS import multiplication
 """
 Object Oriented programming...?
 """
@@ -46,28 +47,6 @@ def main():
 
 """    
 
-class Python:
-
-    def get_details_for_each_python_home(self, python_home):
-        self.python_conf_path  = os.path.dirname(python_home)
-        self.ph = python_home
-        return None
-
-
-    def display(self):   
-        print(f"python home: {os.path.dirname(ph)}\npython configuration path: {python_conf_path} ")
-        return None
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -76,10 +55,9 @@ class Python:
 
 
 def main():
-    pass
-    return None
-
-
+    multiplication()
+  
 
 if __name__ == "__main__":
+    print(f"Hi i'm in main.py {__name__}")
     main()    
