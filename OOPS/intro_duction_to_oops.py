@@ -10,7 +10,6 @@
 ## Inheritance... 
 ## Inheritance...
 
-"""
 class Employee:
 
     def list_of_empoyee_attr(self, first_name, last_name, salary, hired_date, employee_id):
@@ -37,11 +36,6 @@ def main():
     emp2.list_of_empoyee_attr(first_name="jason", last_name= "paul", salary = 5000, hired_date="09-10-2020",employee_id = 104)
 
     emp2.display_employee_attr()
-    
-
-if __name__ == "__main__":
-    pass
-"""
 
 my_buckets = [
     "ecs.terraform.cluster.terraform", 
