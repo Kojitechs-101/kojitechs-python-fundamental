@@ -8,7 +8,7 @@
 ## Polymorphism... 
 ## Encapsulation ... 
 ## Inheritance... 
-## Inheritance...
+
 
 class Employee:
 
@@ -92,6 +92,53 @@ def main():
     ## Delete a bucket
     s3_objects.delete_bucket("newbucket")
   
+
+#  We want to create one class/Template that would store employees details
+
+class Employee:
+    
+    def __init__(self, name, age,salary, employee_id):
+        self.name = name
+        self.age = age  
+        self.salary = salary 
+        self.employee_id = employee_id
+        return None
+
+#     def assign_name_age_salary_id(self, name, age, salary, id): # This is method one
+#         self.name = name
+#         self.age = age  
+#         self.salary = salary 
+#         self.id = id
+#         return None
+
+    def display(self): # this is method two. # Display func doesn't have any variable 
+    
+        print(f"The employee name is: {self.name}\tand The employee age is: {self.age}\tand The employee salary is: ${ self.salary}\tand employee id is : {self.employee_id }")
+        return None
+
+# class Car:
+
+#     def assign_atr(self, color, name, mileage, year):
+#         self.color = color
+#         self.name = name
+#         self.mileage = mileage
+#         self.year = year
+#         # self.display()
+#         return None
+
+#     def display(self):
+#         print(f"\tthe name of my car is {self.name}\tand the color is {self.color}\tand the mileage is {self.mileage}\tThe year is {self.year}")
+#         return None
+
+
+def main():
+    # we need to create an object out of our employee template. 
+    emp1 = Employee(name="Koji", age=25, salary=45000, employee_id=100)
+    emp1.display()
+
+
+if __name__ == "__main__":
+    main()  
 
 if __name__ == "__main__":
     main()
