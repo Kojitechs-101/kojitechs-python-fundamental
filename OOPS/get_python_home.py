@@ -27,30 +27,34 @@ def main():
 
 class PythonHome(object):
 
-    def __init__(self, python_home):
-        self.python_home = os.path.dirname(os.path.dirname(python_home))
-        self.python_confi_file = python_home
+    def __init__(self, home):
+        self.search_home = os.path.dirname(os.path.dirname(home))
+        self.search_confi_file = home
         return None
 
     def get_all_home(self):
         list_of_python = []
         for r,d,f in os.walk("/"):
             for each_file in f:
-                if f == self.python_confi_file:
+                if each_file == self.search_confi_file:
                     list_of_python.append(os.path.join(r,each_file))
         return list_of_python       
 
     def display(self):
-        print("python home is: ", self.python_home)
-        print("python configuration file is: ",self.python_confi_file)
+        python_object = []
+        print(f"Finding list of {self.search_confi_file}: ")
+        list_of_python = self.get_all_home()
+        for each_file in list_of_python:
+            print(each_file)
         return None
         
 def main():
-    path = "python"
+    path = "postgres"
     
     python_pbject = PythonHome(path)
     objects = python_pbject.get_all_home()
-    print(objects)
+    python_pbject.display()
+
 
 
 if __name__ == '__main__':
