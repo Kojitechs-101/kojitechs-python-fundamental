@@ -1,0 +1,5 @@
+S_NO,instance-id,instance-type,public-ip,subnet-id,status,creation-date
+1,i-068c8caedb78e0fe5,t2.micro,,subnet-3aac1e1b,stopped,2022-10-23
+2,i-0731c194a93b6fead,t2.micro,,subnet-3aac1e1b,stopped,2022-10-23
+3,i-0215270a16776e596,t2.micro,44.203.114.98,subnet-3aac1e1b,running,2022-10-23
+4,i-074c5bd7d143e495d,t2.micro,3.91.203.67,subnet-3aac1e1b,running,2022-10-23
